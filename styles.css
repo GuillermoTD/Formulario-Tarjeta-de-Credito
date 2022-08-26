@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family:"Lato",monospace;
+}
+
+body{
+    background:#ddeefc;
+}
+
+.contenedor{
+    width:100%;
+    max-width:900px;
+    padding: 2.5rem 1.25rem;
+    margin:auto;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+
+/* tarjeta estilos */
+
+.tarjeta{
+    width:100%;
+    max-width:30.5rem;
+    position:relative;
+    transition: .3s ease all;
+    transform:rotateY(0deg);
+    transform-style: preserve-3d;
+    backface-visibility:hidden;
+    cursor:pointer;
+    z-index:2;
+    border-radius:15px;
+}
+
+.tarjeta.active{
+    transform:rotateY(180deg);
+}
+
+.tarjeta > div{
+    padding:30px;
+    border-radius:15px;
+    min-height:18rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow:0px 10px 0 rgba(98,148,8,0.3);
+    color:white;
+}
+
+.tarjeta .delantera{
+    width:100%;
+    background-image:url("./img/bg-tarjeta/bg-tarjeta-02.jpg");
+    background-size:cover;
+}
+
+.delantera .logo-marca{
+    text-align:right;
+    min-height:50px;
+}
+
+.delantera .logo-marca img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    max-width:80px;
+}
+
+.delantera .chip{
+    width:100%;
+    max-width:50px;
+    margin-bottom:20px;
+}
+
+.delantera .grupo .label{
+    font-size:14px;
+    color:#8c979e;
+}
+
+.delantera .grupo .numero,
+.delantera .grupo .nombre,
+.delantera .grupo .expiracion{
+    color:#fff;
+    font-size:16px;
+    text-transform:uppercase;
+}
+
+.delantera .flexbox{
+    display: flex;
+    justify-content: space-between;
+    margin-top:20px;
+}
+
+.trasera{
+    background-image:url("./img/bg-tarjeta/bg-tarjeta-02.jpg");
+    background-size:cover;
+    position:absolute;
+    top:0;
+    transform:rotateY(180deg);
+    backface-visibility: hidden;
+}
